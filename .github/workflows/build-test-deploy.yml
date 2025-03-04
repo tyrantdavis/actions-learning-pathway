@@ -23,5 +23,7 @@ jobs:
         with:
           node-version: '18.x'
       - run: npm install --silly
+      - name: Install dependencies
+        run: npm install --save-dev eslint
       - run: npm test --silly
 
