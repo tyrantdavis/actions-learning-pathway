@@ -71,3 +71,19 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
+          
+# Here's what happens when using peaceiris/actions-gh-pages@v3 instead of :
+
+#     The action checks out the repository and sets up the environment.
+#     It builds the project using the npm run build command.
+#     It deploys the built files to GitHub Pages using the github_token and publish_dir inputs.
+
+# By using peaceiris/actions-gh-pages@v3, we avoided the need to upload an artifact separately, which was causing 
+# the issue. Instead, the action handles the deployment process internally, making it a more reliable and efficient 
+# way to deploy to GitHub Pages.
+
+# Additionally, peaceiris/actions-gh-pages@v3 is a well-maintained and widely-used action, which means it's less 
+# likely to have issues or bugs compared to other actions.
+
+# Overall, using peaceiris/actions-gh-pages@v3 simplified the deployment process and avoided the artifact upload 
+# issue, resulting in a successful deployment to GitHub Pages.
