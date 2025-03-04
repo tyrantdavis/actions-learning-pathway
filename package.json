@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "next lint --fix"
+    "test": "next lint"
   },
   "dependencies": {
     "next": "14.2.21",
